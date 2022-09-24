@@ -1,0 +1,15 @@
+.adress {
+    border: 1px solid #DCDCDC;
+    height: 486px;
+    width: 771px;
+    margin-top: 10px;
+    margin-left: 175px;
+}
+.inputaddress {
+    margin-left: 5px;
+    margin-bottom: 30px;
+   
+}
+.field {
+    margin-left: -285px;
+}

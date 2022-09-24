@@ -1,14 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import "./DisplayBooks.css";
 //import Header from "../Header/Header";
 import imageone from "../../Images/imageone.png";
+import BookService from "../../Services/BookService";
+import { useNavigate } from "react-router-dom";
+import GetBookId from "../GetBookId/GetBookId";
+
+const bookservice = new BookService();
 
 function DisplayBooks(props) {
+
+  const navigate = useNavigate();
+  const [bookData,setBookData] = useState([])
+   const [view, SetView] = useState(false);
+  
+  const getBookById = (props) => {
+    console.log("props")
+    let data = {
+      "id":props.arrayBook.id
+    }
+
+    console.log("calling id");
+               console.log(data);
+               bookservice.getBookById(data).then((response) => {
+                    
+      console.log(response);
+
+          // navigate('/getBookById')
+          setBookData(response.data.book)
+          SetView(true);
+        }).catch((error) =>{
+          console.log(error);
+        })
+  }
+
   return (
     <>
-      {/* <Header /> */}
+    {view == false ?
+      
       <div className="align_books">
-        <div className="book_box">
+        <div className="book_box" onClick={() => getBookById(props)}>
           <div>
             <div className="book_part">
               <div className="booksImage">
@@ -16,6 +47,7 @@ function DisplayBooks(props) {
               </div>
             </div>
             <div className="Bottom_part">
+              <div className="insidebottompart">
               <div className="book_text" > {props.arrayBook.name}</div>
               <div className="Author_part">{props.arrayBook.author}</div>
               <div>
@@ -27,7 +59,7 @@ function DisplayBooks(props) {
                   
                 </span>
                 <div className="booksPrice">Rs.{props.arrayBook.price}</div>
-                {/* <span className='quantity'>({props.arrayBook.quantity})</span> */}
+                 <span className='quantity'>({props.arrayBook.quantity})</span> 
 
               </div>
             </div>
@@ -35,8 +67,15 @@ function DisplayBooks(props) {
           
         </div>
       </div>
-    </>
+      </div>
+
+      
+        :<GetBookId bookdata = {bookData}></GetBookId>
+     }
+      
+      </>
   );
 }
+
 
 export default DisplayBooks;

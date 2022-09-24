@@ -16,8 +16,12 @@ const header = {
 
 class BookService {
     getAllBooks() {
-        // const headers = header();
-        return axiosService.get(`${baseURL}/displayAllBooks`, header)
+        return axiosService.get(`${baseURL}/displayAllBooks`,header)
+    }
+
+    getBookById(data) {
+        return axiosService.post(`${baseURL}/getBookById`,data,header)
     }
 }
+
 export default BookService;

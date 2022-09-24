@@ -5,7 +5,7 @@ import DisplayBooks from '../../Components/Books/DisplayBooks';
 import Header from '../../Components/Header/Header';
 
 
- const bookservice = new BookService();
+const bookservice = new BookService();
 function DashBoard(props) {
 
     const [bookArray, setBookArray] = useState([]);
@@ -30,10 +30,10 @@ function DashBoard(props) {
             < Header />
 
 
-            <div className='Heading'>
-                <span className='booksheading'>Books({bookArray.length})</span>
+            <div className='topics'>
+                <span className='heading'>Books({bookArray.length})</span>
 
-                <select className='drop'>
+                <select className='arrange'>
                     <option>Sort by relevance</option>
                     <option>Price:Low to High</option>
                     <option>Price:High to Low</option>
@@ -41,7 +41,7 @@ function DashBoard(props) {
                 </select>
             </div>
 
-            <div className='bookscontainer1' >
+            <div className='bookscontainer' >
              
                 <div className='getbooks' >
                 {bookArray.length > 0 && bookArray.map((book, index) => (

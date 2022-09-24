@@ -4,7 +4,7 @@ let baseURL = 'http://127.0.0.1:8000/api'
 
 const header = {
     headers: {
-        token: localStorage.getItem("token")
+        Authorization: 'Bearer' + " " + localStorage.getItem('token')
     }
 }
 
@@ -18,6 +18,10 @@ const header = {
 
     forgetPassword(data) {
         return axiosService.post(`${baseURL}/forgotPassword`,data)        
+    }
+
+    address(data) {
+        return axiosService.post(`${baseURL}/addAddress`,data,header);
     }
 }
 export default UserService;

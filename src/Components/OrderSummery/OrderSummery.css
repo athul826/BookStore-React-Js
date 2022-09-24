@@ -1,0 +1,87 @@
+/* .customertext{
+    width: 774px;
+    height: 64px;
+    border: 1px solid #DCDCDC;
+    margin-top: 25px;
+    margin-left: 175px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.customerAddress{
+    margin-left: 25px;
+    font-weight: 600;
+    color: #333232;
+    font-size: 15px;
+}
+.ordercontainer{
+    width:774px;
+    height: auto;
+    margin-left: 175px;
+    border: 1px solid #DCDCDC;
+    margin-top: 45px;
+    margin-bottom: 25px;
+}
+.addressbuttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    margin-left: 10px;
+    margin-right: 15px;
+}
+.cartDetails {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 89px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.cartimage {
+    width: 65px;
+    height: 85px;
+}
+.bookdetails {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+
+}
+
+.bookname {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-stretch:normal;
+   
+    color: #0A0102;
+}
+
+.author {
+    width: auto;
+    height: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* UI Properties */
+    /* text-align: left;
+    font-size: 12px;
+    letter-spacing: 0px;
+    margin-top: 5px;
+    color: #9D9D9D;
+    opacity: 1;
+}
+
+.price {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+   
+   
+    margin-top: 5px;
+    color: #0A0102;
+}
+.continuebutton{
+    display: flex;
+   margin-top: 25px;
+    margin-left: 620px;
+  
+} */ 

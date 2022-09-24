@@ -4,8 +4,16 @@ import educationbook from "../../Images/education.svg";
 import "./Header.css";
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { BsPerson } from 'react-icons/bs';
+import { useNavigate } from "react-router-dom";
+
 
 function Header(props) {
+
+  const navigate = useNavigate();
+    const cart = () => {
+        navigate('/mycart')
+    };
+
   return (
     <div className="Header_part">
       <AppBar className="appbar">
@@ -33,7 +41,7 @@ function Header(props) {
           < BsPerson  size="2rem" color='white'/>
             
              </div>
-             <div className="cart_part" style={{width:50,marginLeft:40}}>
+             <div className="cart_part" onClick={cart} style={{width:50,marginLeft:40}}>
                
                <AiOutlineShoppingCart size="2rem" color='white'/>
             </div>
