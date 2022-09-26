@@ -160,7 +160,7 @@
     font-size: large;
     font-weight: 700;
     position: relative;
-    left: -165px;
+    left: -200px;
     margin-bottom: 5px;
 }
 
@@ -183,11 +183,11 @@
     left: 50px;
 }
 
-.price {
+.rupees {
     font-size: large;
     font-weight: 700;
     position: relative;
-    left: -128px;
+    left: -180px;
     width: 525px;
   
 }

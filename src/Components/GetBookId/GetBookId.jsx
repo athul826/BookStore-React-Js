@@ -58,7 +58,7 @@ function GetBookId(props) {
                 <div>4.5 </div>
                 <AiOutlineStar className="child1-starIcon" />
               </div>
-              <div className="price">RS.{props.bookdata.price}</div>
+              <div className="rupees">RS.{props.bookdata.price}</div>
             </div>
 
             <div className="rightSection-BookDetail-part">

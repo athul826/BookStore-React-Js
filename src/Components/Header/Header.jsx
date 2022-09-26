@@ -14,6 +14,10 @@ function Header(props) {
         navigate('/mycart')
     };
 
+    const searching = (event) => {
+      props.search(event.target.value)
+  }
+
   return (
     <div className="Header_part">
       <AppBar className="appbar">
@@ -31,6 +35,7 @@ function Header(props) {
               <TextField
                 className="searchtext_field"
                 label="Search"
+                onChange={searching}
                 size="small"
               />
             </div>

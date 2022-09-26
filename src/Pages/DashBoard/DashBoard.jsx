@@ -14,11 +14,11 @@ function DashBoard(props) {
   const [bookArray, setBookArray] = useState([]);
 
   const [page, setpage] = useState(1);
-  //   const [search, setSearch] = useState("");
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     getBooks();
-  }, []);
+  }, [search]);
 
   const getBooks = () => {
     setView(true);
@@ -26,7 +26,13 @@ function DashBoard(props) {
       .getAllBooks()
       .then((response) => {
         console.log(response);
-        setBookArray(response.data.books);
+        if (search) {
+
+          let filterBook = response.data.books.filter(books => books.name.toLowerCase().includes(search.toLowerCase()))
+          setBookArray(filterBook)
+      } else {
+          setBookArray(response.data.books)
+      }
       })
       .catch((err) => {
         console.log(err);
@@ -50,10 +56,12 @@ function DashBoard(props) {
     console.log(data);
     setBookdata(data);
   };
-
+  const searchBook = (value) => {
+    setSearch(value)
+}
   return (
     <>
-      <Header />
+      <Header search={searchBook} />
 
       {view ? (
         <div>
