@@ -27,6 +27,21 @@ function GetBookId(props) {
       });
   };
 
+  const addToWishlist = (props) => {
+    console.log(props)
+    let data = {
+
+        'book_id': props.bookdata.id
+    }
+    cartService.addBookToWishlist(data)
+        .then((res) => {
+            console.log(res);
+
+        }).catch((err) => {
+            console.log(err);
+        })
+}
+
   return (
     <>
       <Header></Header>
@@ -45,7 +60,8 @@ function GetBookId(props) {
                 value="ADD TO BAG"
                 className="Add_bag"
               />
-              <input type="button" value="WISHLIST" className="wishlist_part" />
+              <input onClick={() => addToWishlist(props)}
+  type="button" value="WISHLIST" className="wishlist_part" />
             </div>
           </div>
 

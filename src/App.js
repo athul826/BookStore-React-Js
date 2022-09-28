@@ -8,11 +8,13 @@ import CustomerDetails from './Components/CustomerDetails/CustomerDetails';
 import ForgetPassword from './Components/ForgetPassword/ForgetPassword';
 import GetBookId from './Components/GetBookId/GetBookId';
 import OrderSucess from './Components/OrderSuccess/OrderSucess';
+import Wishlist from './Components/Wishlist/Wishlist';
 // import OrderSummery from './Components/OrderSummery/OrderSummery';
 import CartPage from './Pages/CartPage/CartPage';
 import DashBoard from './Pages/DashBoard/DashBoard';
 //import Header from './Components/Header/Header';
 import HomePage from './Pages/HomePage/HomePage';
+import WishlistPage from './Pages/WishlistPage/WishlistPage';
 // import SignUp from './Components/SignUp/SignUp';
 // import Login from './Components/Login/Login';
 
@@ -32,6 +34,7 @@ function App() {
         <Route path = '/customerdetails' element = {<CustomerDetails/> } />
         <Route path = '/ordersuccess' element = {<OrderSucess/> } />
         {/* <Route path = '/ordersummery' element = {<OrderSummery/> } /> */}
+        <Route path = '/wishlist' element = {<WishlistPage/> } />
       </Routes>
       </BrowserRouter>
      

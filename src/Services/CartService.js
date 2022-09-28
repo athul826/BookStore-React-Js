@@ -38,6 +38,21 @@ class CartService {
         // const headers = header();
         return axiosService.get(`${baseURL}/getAllBooksInCart`, header)
     }
+
+    addBookToWishlist(data) {
+        return axiosService.post(`${baseURL}/addBookToWishlistByBookId`, data, header)
+    }
+
+    getAllBooksFromWishlist() {
+       
+        return axiosService.get(`${baseURL}/getAllBooksInWishlist`, header)
+    }
+
+    deleteBookFromWishlist=(data)=>{
+        let response = axiosService.put(`${baseURL}/deleteBookByWishlistId`, data, header)
+        return response;
+    }
+
 }
 
 export default CartService;

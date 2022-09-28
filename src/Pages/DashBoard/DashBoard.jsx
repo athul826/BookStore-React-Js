@@ -26,6 +26,7 @@ function DashBoard(props) {
       .getAllBooks()
       .then((response) => {
         console.log(response);
+        
         if (search) {
 
           let filterBook = response.data.books.filter(books => books.name.toLowerCase().includes(search.toLowerCase()))
@@ -56,6 +57,7 @@ function DashBoard(props) {
     console.log(data);
     setBookdata(data);
   };
+  
   const searchBook = (value) => {
     setSearch(value)
 }
