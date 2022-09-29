@@ -24,18 +24,12 @@ class CartService {
         return axiosService.post(`${baseURL}/decrementBookQuantityInCart`, data, header)
     }
 
-
-    // deleteBookFromCart(data) {
-    //     return axiosService.delete(`${baseURL}/deleteBookByCartId`, data, header)
-    // }
-
     deleteBookFromCart=(data)=>{
         let response = axiosService.put(`${baseURL}/deleteBookByCartId`, data, header)
         return response;
     }
 
     getAllBooksFromCart() {
-        // const headers = header();
         return axiosService.get(`${baseURL}/getAllBooksInCart`, header)
     }
 

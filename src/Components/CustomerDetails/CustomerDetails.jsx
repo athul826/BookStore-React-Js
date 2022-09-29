@@ -3,7 +3,6 @@ import "./CustomerDetails.css";
 import { Button, TextField, Checkbox, FormControl, FormControlLabel, FormLabel,Radio,RadioGroup, } from "@mui/material";
 import UserService from '../../Services/UserService';
 
-
 const userservice = new UserService();
 
 function CustomerDetails(props) {
@@ -17,6 +16,7 @@ function CustomerDetails(props) {
         PinCode: '',
         address_type: ''
     })
+
     const changeState = (event) => {
         setAddress(previousValue => {
             return { ...previousValue, [event.target.name]: event.target.value }
@@ -148,8 +148,6 @@ function CustomerDetails(props) {
 
                     </div>
                 </div>
-                
-                               
                 
                 );
             }

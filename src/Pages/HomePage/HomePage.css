@@ -6,6 +6,7 @@
     align-items: center;
     background-color: gray;
 }
+
 .page2 {
     width: 40%;
     height: 68%;
@@ -14,6 +15,7 @@
     align-items: center; 
     justify-content: center;
 }
+
 .leftside {
     width: 80%;
     height: 95%;
@@ -24,6 +26,7 @@
     border-radius: 20px;
     margin-left: -100px;
 }
+
 .leftside_image {
     width: 70%;
     height: 70%;
@@ -32,16 +35,19 @@
     gap: 1rem;
     
 }
+
 .image {
     width: 100%;
     height: 100%;
     border-radius: 80%;
 }
+
 .text_part {
     margin-top: -10px;
     margin-right: -5px;
     
 }
+
 .rightsidebox {
     width: 550px;
     height: 555px;
@@ -55,6 +61,7 @@
     border-radius: 5%;
     margin-top: 3px;
 }
+
 .topbutton {
     width: 70%;
     height: 10%;

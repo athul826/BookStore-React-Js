@@ -11,7 +11,6 @@ import CartService from "../../Services/CartService";
 import { useNavigate } from "react-router-dom";
 import OrderService from "../../Services/OrderService";
 
-
 const cartService = new CartService();
 const orderService = new OrderService();
 
@@ -62,11 +61,13 @@ function Cart(props) {
         console.log(err);
       });
   };
+
   const removeCart = (props) => {
     console.log(props.arrayCart.id);
     let data = {
       id: props.arrayCart.id,
     };
+
     cartService
       .deleteBookFromCart(data)
       .then((res) => {
@@ -84,6 +85,7 @@ function Cart(props) {
       name: props.arrayCart.name,
       quantity: props.arrayCart.book_quantity,
     };
+
     orderService
       .placeOrder(data)
       .then((res) => {
@@ -108,10 +110,7 @@ function Cart(props) {
           </div>
         </div>
 
-        {/* {cartArray.length >0 && cartArray.map((cart, index) =>(
-                    <div key={index}> */}
-
-        <div className="cartDetails">
+       <div className="cartDetails">
           <img className="cartimage" src={imageone}></img>
           <div className="bookdetails">
             <span className="bookname"> {props.arrayCart.name} </span>
@@ -135,11 +134,8 @@ function Cart(props) {
 
           <span onClick={() => removeCart(props)}> Remove </span>
         </div>
-        {/* 
-                    </div>
-              ) )} */}
-
-        <div className="placeorderbutton">
+      
+      <div className="placeorderbutton">
           <Button
             onClick={customerDetailsOpen}
             style={{
@@ -199,6 +195,7 @@ function Cart(props) {
           <span style={{ marginLeft: -600 }}>OrderSummery</span>
         </div>
       )}
+
     </div>
   );
 }

@@ -12,27 +12,7 @@ function DisplayBooks(props) {
   const [bookData, setBookData] = useState([]);
   const [view, SetView] = useState(false);
 
-  // const getBookById = (props) => {
-  //   console.log("props")
-  //   let data = {
-  //     "id":props.arrayBook.id
-  //   }
-
-  //   console.log("calling id");
-  //              console.log(data);
-  //              bookservice.getBookById(data).then((response) => {
-
-  //     console.log(response);
-
-  //         // navigate('/getBookById')
-  //         setBookData(response.data.book)
-  //         SetView(true);
-  //       }).catch((error) =>{
-  //         console.log(error);
-  //       })
-
   const bookDetail = (data) => {
-    // props.listenToBooks(true);
     props.listenToEachBook(data);
   };
 
@@ -45,6 +25,7 @@ function DisplayBooks(props) {
               <img src={imageone} alt="" className="book-image" />
             </div>
           </div>
+          
           <div className="Bottom_part">
             <div className="insidebottompart">
               <div className="book_text"> {props.arrayBook.name}</div>

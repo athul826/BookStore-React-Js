@@ -1,7 +1,6 @@
 import React from "react";
 import "./GetBookId.css";
 import imageone from "../../Images/imageone.png";
-//import AiOutlineStar from '@mui/icons-material/StarOutline';
 import { Button } from "@mui/material";
 import Header from "../Header/Header";
 import { AiOutlineStar } from "react-icons/ai";
@@ -61,7 +60,7 @@ function GetBookId(props) {
                 className="Add_bag"
               />
               <input onClick={() => addToWishlist(props)}
-  type="button" value="WISHLIST" className="wishlist_part" />
+              type="button" value="WISHLIST" className="wishlist_part" />
             </div>
           </div>
 

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import "./Wishlist.css";
 import imageone from "../../Images/imageone.png";
-import Header from "../Header/Header";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import CartService from '../../Services/CartService';
 
@@ -11,14 +10,9 @@ function Wishlist(props) {
 
     const [wishlistArray, setwishlistArray] = useState([])
 
-
-
     useEffect(() => {
         getWishList();
     }, [])
-
-
-
 
     const getWishList = () => {
         cartService.getAllBooksFromWishlist()
@@ -36,6 +30,7 @@ function Wishlist(props) {
 
             'id': props.wishlistArray.id
         }
+
         cartService.deleteBookFromWishlist(data)
             .then((res) => {
                 console.log(res);
@@ -50,16 +45,15 @@ function Wishlist(props) {
 
             <div className="wishlistContainer">
 
-
-                <div className="secondSection-wishlist">
+            <div className="secondSection-wishlist">
                     <div className="secondSection-myWishlist">My Wishlist</div>
-
 
                     <div className="secondSection-displayMyWishlist">
                         <div className="wishlistBookData">
                             <div className="wishListBookData-Image">
                                 <img src={imageone} alt="" className="wishlist-bookImage" />
                             </div>
+
                             <div className="wishlistBookData-text">
                                 <div className="wishlistBookData-text1">
                                     <div className="wishlistBook-title">{props.wishlistArray.name}</div>
@@ -78,8 +72,7 @@ function Wishlist(props) {
 
                 </div>
             </div>
-
-        </div>
+            </div>
     );
 }
 

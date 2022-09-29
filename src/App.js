@@ -4,7 +4,6 @@ import './App.css';
 // import Cart from './Components/Cart/Cart';
 import CustomerDetails from './Components/CustomerDetails/CustomerDetails';
 //import DisplayBooks from './Components/Books/DisplayBooks';
-//import DisplayBooks from './Components/Books/DisplayBooks';
 import ForgetPassword from './Components/ForgetPassword/ForgetPassword';
 import GetBookId from './Components/GetBookId/GetBookId';
 import OrderSucess from './Components/OrderSuccess/OrderSucess';

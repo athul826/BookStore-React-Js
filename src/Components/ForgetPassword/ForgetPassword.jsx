@@ -20,6 +20,7 @@ function ForgetPassword(props) {
     let data = {
       email: text.email,
     };
+    
     console.log(data);
     userservice
       .forgetPassword(data)

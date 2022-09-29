@@ -7,8 +7,6 @@ import { BsPerson } from 'react-icons/bs';
 import { useNavigate } from "react-router-dom";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
-
-
 function Header(props) {
 
   const navigate = useNavigate();
@@ -54,7 +52,8 @@ function Header(props) {
             <div className="search"  >
               <TextField
                 className="searchtext_field"
-                label="Search"
+                //  label="Search"
+                placeholder="Search"
                 onChange={searching}
                 size="small"
               />
@@ -62,12 +61,12 @@ function Header(props) {
             
             <List />
           </div>
-          {/* <div className="person" style={{width:50,marginLeft:420}} >
+          <div className="person" style={{width:50,marginLeft:375}} >
           < BsPerson  size="2rem" color='white'/>
             
-             </div> */}
-             <div className="profile">
-                    <BsPerson size="2rem" style={{ color: '#FFFFFF' }} />
+             {/* </div>
+             <div className="person">
+                    <BsPerson size="2rem" style={{ color: '#FFFFFF' }} /> */}
                     <span
                         className="profile-name"
                         id="basic-button"
@@ -90,7 +89,6 @@ function Header(props) {
                         <MenuItem onClick={goToWishlist}>
                             <FavoriteIcon>
                             </FavoriteIcon>
-                            {/* <ListItemText>My Wishlist</ListItemText> */}
                             <span className='MyWishlist'>My Wishlist</span>
                         </MenuItem>
                         <MenuItem className='Logout'>
@@ -98,10 +96,8 @@ function Header(props) {
                         </MenuItem>
 
                     </Menu>
-
-
-
-                </div>
+              </div>
+              
              <div className="cart_part" onClick={cart} style={{width:50,marginLeft:40}}>
                
                <AiOutlineShoppingCart size="2rem" color='white'/>

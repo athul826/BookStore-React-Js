@@ -9,10 +9,6 @@ const header = {
         Authorization : 'Bearer' + " " + localStorage.getItem('token')
     }
 }
-// function header() {
-//     return localStorage.getItem("token")
-// }
-
 
 class BookService {
     getAllBooks() {

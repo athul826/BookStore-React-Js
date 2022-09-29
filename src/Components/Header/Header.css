@@ -1,26 +1,27 @@
-.bookstore_text{
+.bookstore_text {
     margin-left: 20px;
-    }
-    .bookimage {
-        margin-left: 165px;
-    }
-    .search {
-        padding-left: 15px;
-        margin-top: 17px;
-      
-        
-    }
-    .searchtext_field {
-        width: 500px;
-        background-color: white;
-        border-radius: 5px;
-        
-        
-    }
-    .cart_part {
-        margin-left: 300px;
-    }
-    .profile{
-        margin-right: 370px;
-    }
+}
+
+.bookimage {
+    margin-left: 165px;
+}
+
+.search {
+    padding-left: 15px;
+    margin-top: 17px;
+}
+
+.searchtext_field {
+    width: 500px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.cart_part {
+    margin-left: 300px;
+}
+
+.person{
+    margin-right: 10px;
+}
     

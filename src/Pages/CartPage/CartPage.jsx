@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
-// import React, { useEffect, useState } from 'react';
 import Cart from '../../Components/Cart/Cart';
-// import Header from "../Header/Header";
 import CartService from '../../Services/CartService';
 import { useNavigate } from 'react-router-dom';
 import Header from '../../Components/Header/Header';
@@ -18,11 +16,7 @@ function CartPage(props) {
         getCartList();
       }, [])
 
-    //   const goToDashBoard = () => {
-    //     navigate('/dashboard')
-    // }
-    
-      const getCartList = () => {
+    const getCartList = () => {
         cartService.getAllBooksFromCart()
           .then((res) => {
             console.log(res.data);
@@ -35,16 +29,11 @@ function CartPage(props) {
     return (
         <div>
           <Header/>
-          {/* <span onClick={goToDashBoard} className='homecart'>Home / Cart</span> */}
           
             {cartArray.length > 0 && cartArray.map((cart, index) => (
               <Cart key={index} arrayCart={cart} getcart={getCartList} />
     
             ))}
-    
-            {/* <Mycart /> */}
-         
-    
     
         </div>
       );

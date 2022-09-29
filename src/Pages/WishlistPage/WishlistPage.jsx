@@ -23,7 +23,7 @@ function WishlistPage(props) {
     }
 
 
-    return (
+return (
         <div>
             <Header/>
 

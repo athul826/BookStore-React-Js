@@ -27,6 +27,4 @@ function usePagination (data, dataPerPage) {
     return { next, previous, jump, currentData, page, pageCount }
 }
 
-
-
 export default usePagination;
